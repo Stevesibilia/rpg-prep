@@ -1,0 +1,5 @@
+# Build artifacts (produced by CI on tag, or locally via INSTALL.md one-liner)
+dist/
+
+# Eval workspace (skill-creator test runs)
+rpg-prep-workspace/

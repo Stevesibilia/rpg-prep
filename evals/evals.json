@@ -1,0 +1,26 @@
+{
+  "skill_name": "rpg-prep",
+  "evals": [
+    {
+      "id": 1,
+      "skill": "adventure-writing",
+      "prompt": "Devo preparare la sessione di sabato per la mia campagna di Symbaroum. I PG (una strega, un cacciatore di taglie e uno studioso di Ordo Magica) hanno appena scoperto che un villaggio ai margini del Davokar è stato abbandonato in una notte. Scrivi l'avventura completa per una sessione di 4 ore.",
+      "expected_output": "Complete Italian adventure document: dramatic question, strong start, ~10 secrets/clues, 4-6 scenes with visual:/mood: fields in English, NPCs with want/fear/mannerism, flexible climax, hook-ignored fallback",
+      "files": []
+    },
+    {
+      "id": 2,
+      "skill": "midjourney-prompts",
+      "prompt": "I need images for my Call of Cthulhu one-shot set in a 1920s Ligurian fishing village. Scenes: 1) the village seen from an arriving boat at dusk, fog rolling in; 2) the abandoned lighthouse interior, keeper's dinner still on the table covered in mold; 3) portrait of Don Ruggero, the village priest hiding a terrible secret, gaunt, always clutching his rosary. Give me Midjourney prompts.",
+      "expected_output": "Three ready-to-paste English MJ prompts with consistent 1920s horror style block, correct params (--ar, --exp), shot types stated, no junk tokens like '8k masterpiece'",
+      "files": []
+    },
+    {
+      "id": 3,
+      "skill": "suno-prompts",
+      "prompt": "Mi servono le musiche per la sessione di stasera di Vileborn: 1) tema di esplorazione per le catacombe sotto la cattedrale, 2) traccia di combattimento per lo scontro con l'Angelo Caduto (boss finale), 3) qualcosa di malinconico per il funerale del PNG amico dei PG. Dammi i prompt per Suno.",
+      "expected_output": "Three Suno cues: English style prompts (4-7 descriptors, gothic grimdark palette), lyrics-field blocks with meta tags ending in [End], instrumental settings + slider advice, table usage notes",
+      "files": []
+    }
+  ]
+}

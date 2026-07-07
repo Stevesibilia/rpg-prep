@@ -1,0 +1,52 @@
+stages:
+  - build
+  - release
+
+# Build one zip per skill (uploadable to claude.ai) when a tag is pushed.
+build-zips:
+  stage: build
+  image: alpine:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - apk add --no-cache zip
+    - mkdir -p dist
+    - cd plugins/rpg-prep/skills
+    - |
+      for s in */; do
+        s="${s%/}"
+        zip -qr "../../../dist/${s}.zip" "${s}"
+        echo "packaged ${s}.zip"
+      done
+    - cd ../../..
+    - ls -l dist/
+  artifacts:
+    paths:
+      - dist/*.zip
+    expire_in: never
+
+# Create a GitLab release with direct links to the zip artifacts.
+release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  needs:
+    - job: build-zips
+      artifacts: false
+  script:
+    - echo "Creating release for $CI_COMMIT_TAG"
+  release:
+    tag_name: $CI_COMMIT_TAG
+    name: "rpg-prep $CI_COMMIT_TAG"
+    description: "Skill zips for claude.ai upload are attached as assets. Claude Code users install via the plugin marketplace instead (see INSTALL.md)."
+    assets:
+      links:
+        - name: adventure-writing.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/adventure-writing.zip?job=build-zips"
+        - name: storytelling.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/storytelling.zip?job=build-zips"
+        - name: midjourney-prompts.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/midjourney-prompts.zip?job=build-zips"
+        - name: suno-prompts.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/suno-prompts.zip?job=build-zips"
