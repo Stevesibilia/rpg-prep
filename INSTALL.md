@@ -1,6 +1,6 @@
 # Installing the rpg-prep skills
 
-Nine skills: `campagna-rpg`, `enhanced-avventure-rpg`, `avventure-gdr`, `adventure-writing`, `cronaca-di-sessione`, `scrittura-italiana`, `midjourney-prompts`, `suno-prompts`, `suno-prompt-creator`.
+Ten skills: `campagna-rpg`, `enhanced-avventure-rpg`, `revisione-avventura`, `avventure-gdr`, `adventure-writing`, `cronaca-di-sessione`, `scrittura-italiana`, `midjourney-prompts`, `suno-prompts`, `suno-prompt-creator`.
 
 **Short answer on visibility: no, a public repo is not required.** Claude Code installs from a local directory or from a private GitHub repo (it uses your own git credentials to clone). Claude.ai web and the Claude desktop/mobile apps don't use repos at all: you upload zip files manually. A public repo is only useful if you want to share the skills with other people.
 
@@ -17,7 +17,7 @@ The repo is already a valid plugin marketplace. From any Claude Code session:
 /plugin install rpg-prep@rpg-prep
 ```
 
-All nine skills become available in every project. Update flow after editing a skill:
+All ten skills become available in every project. Update flow after editing a skill:
 
 ```
 /plugin marketplace update rpg-prep
@@ -56,6 +56,9 @@ Skills trigger automatically when the request matches their description. Typical
   del Davokar è stato abbandonato in una notte
   → enhanced-avventure-rpg produces the full Italian adventure doc
 
+> Rivedi l'avventura: regge?
+  → revisione-avventura reports the problems in the chat, then brainstorms fixes
+
 > Dammi le immagini per tutte le scene
   → midjourney-prompts reads the visual: fields, emits MJ prompts
 
@@ -77,6 +80,7 @@ Requirements: a paid plan (Pro/Max/Team/Enterprise) with code execution / skills
 1. Zips are pre-built in `dist/`:
    - `dist/campagna-rpg.zip`
    - `dist/enhanced-avventure-rpg.zip`
+   - `dist/revisione-avventura.zip`
    - `dist/avventure-gdr.zip`
    - `dist/adventure-writing.zip`
    - `dist/cronaca-di-sessione.zip`
@@ -101,7 +105,7 @@ Note: on claude.ai the skills can't read your local files. Paste campaign contex
 
 ## 3. Claude desktop and mobile apps
 
-Skills uploaded to claude.ai are account-level: the desktop app and mobile app use the same backend, so the nine skills are available there automatically once uploaded via the web UI (step 2 above). There is no separate installation.
+Skills uploaded to claude.ai are account-level: the desktop app and mobile app use the same backend, so the ten skills are available there automatically once uploaded via the web UI (step 2 above). There is no separate installation.
 
 The desktop app additionally bundles Claude Code — inside a Claude Code pane, the plugin marketplace from section 1 applies instead.
 

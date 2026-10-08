@@ -53,6 +53,24 @@
       "files": [
         "plugins/rpg-prep/skills/campagna-rpg/references/esempio.md"
       ]
+    },
+    {
+      "id": 8,
+      "skill": "revisione-avventura",
+      "prompt": "Rivedi questa avventura: la logica regge? La storia scorre? Fai l'avvocato del diavolo.",
+      "expected_output": "Report in the chat only, no file or note, following references/rapporto.md: what was read, a one-sentence verdict, problems numbered P1… ordered by severity (bloccante, serio, minore), each with location IDs (S, R, I or quoted text), what goes wrong at the table, root cause and a fix at the root; a «Da chiarire» list; «Controlli superati». Expected to surface at least: the missing rule for destroying the Anchor (S5), the timing of Donato's arrival versus the second quake, and the question of «La Maestà» stopping non-Awakened PCs. No invented problems that the document already resolves (e.g. clue counts, scene reachability). Does not rewrite the document. Ends by opening the brainstorm with one question about the most serious problem. Italian, no em or en dashes.",
+      "files": [
+        "plugins/rpg-prep/skills/enhanced-avventure-rpg/references/esempio.md"
+      ]
+    },
+    {
+      "id": 9,
+      "skill": "revisione-avventura",
+      "prompt": "Metti alla prova questa campagna: fronti, archi e finali reggono?",
+      "expected_output": "Campaign attacks from references/attacchi-campagna.md applied to the note: front clocks causal and paced, why fronts do not win at once, arcs that depend on a specific PC choice, endings reachable two ways and seeded earlier, every PC centred and touched by a front, threads payable. Simulated tables run on arcs. Report in the chat in the rapporto.md format with P-numbered findings and severity, verified against the note; then one brainstorm question. Italian, no em or en dashes.",
+      "files": [
+        "plugins/rpg-prep/skills/campagna-rpg/references/esempio.md"
+      ]
     }
   ]
 }
