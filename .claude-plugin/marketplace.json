@@ -1,6 +1,6 @@
 {
   "name": "rpg-prep",
-  "description": "RPG session-prep skills: adventure writing, storytelling, Midjourney and Suno prompt generation",
+  "description": "RPG session-prep skills: adventure writing, session chronicles, Midjourney and Suno prompt generation",
   "owner": {
     "name": "Stefano Sibilia",
     "email": "stefano.sibilia@gmail.com"
@@ -9,7 +9,7 @@
     {
       "name": "rpg-prep",
       "source": "./plugins/rpg-prep",
-      "description": "Pre-session toolkit for tabletop RPG game masters: write adventures (Italian GM notes), get storytelling technique advice, generate Midjourney prompts for scene/NPC art, and generate Suno prompts for session ambience music.",
+      "description": "Pre-session toolkit for tabletop RPG game masters: write table-ready adventures (Italian GM notes), turn sessions into in-world chronicles, generate Midjourney prompts for scene/NPC art and Suno prompts for session music.",
       "author": {
         "name": "Stefano Sibilia"
       }

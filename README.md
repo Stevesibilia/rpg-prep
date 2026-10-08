@@ -2,7 +2,7 @@
 
 Pre-session toolkit for tabletop RPG game masters, distributed as Claude Code skills.
 
-Nine skills:
+Eight skills:
 
 | Skill                    | What it does                                                                                                                                                                                                                                                                                             |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -12,7 +12,6 @@ Nine skills:
 | `cronaca-di-sessione`    | Turns a session recap into an in-world chronicle in the style of medieval travel accounts, with a chronicler fitted to the milieu                                                                                                                                                                        |
 | `scrittura-italiana`     | Italian writing rules applied by every other skill: no em or en dash, Italian punctuation and quotes                                                                                                                                                                                                     |
 | `suno-prompt-creator`    | General-purpose Suno prompts: songs, themes, jingles, lyrics with structure tags                                                                                                                                                                                                                         |
-| `storytelling`           | Narration technique advisor: description, NPC voices, pacing, tension, improv, spotlight                                                                                                                                                                                                                 |
 | `midjourney-prompts`     | Scene/NPC → ready-to-paste Midjourney prompts (v8.1/v7 aware), campaign style consistency                                                                                                                                                                                                                |
 | `suno-prompts`           | Scene mood → ready-to-paste Suno prompts (v5.5), session cue types, campaign sonic identity                                                                                                                                                                                                              |
 
@@ -35,6 +34,6 @@ Quick version for Claude Code:
 .claude-plugin/marketplace.json    marketplace manifest
 plugins/rpg-prep/
   .claude-plugin/plugin.json       plugin manifest
-  skills/*/SKILL.md                the nine skills (+ references/, scripts/)
+  skills/*/SKILL.md                the eight skills (+ references/, scripts/)
 dist/                              packaged zips for claude.ai upload
 ```
