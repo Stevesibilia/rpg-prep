@@ -3,3 +3,6 @@ dist/
 
 # Eval workspace (skill-creator test runs)
 rpg-prep-workspace/
+
+# macOS
+.DS_Store
