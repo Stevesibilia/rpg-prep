@@ -1,7 +1,7 @@
 {
   "name": "rpg-prep",
-  "description": "Pre-session toolkit for tabletop RPG game masters: adventure writing, storytelling technique, Midjourney art prompts, Suno ambience prompts.",
-  "version": "0.1.0",
+  "description": "Pre-session toolkit for tabletop RPG game masters: table-ready adventure prep, storytelling technique, Midjourney art prompts, Suno ambience prompts.",
+  "version": "0.2.0",
   "author": {
     "name": "Stefano Sibilia"
   }
