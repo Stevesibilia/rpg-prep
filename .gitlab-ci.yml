@@ -52,3 +52,11 @@ release:
           url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/midjourney-prompts.zip?job=build-zips"
         - name: suno-prompts.zip
           url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/suno-prompts.zip?job=build-zips"
+        - name: avventure-gdr.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/avventure-gdr.zip?job=build-zips"
+        - name: cronaca-di-sessione.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/cronaca-di-sessione.zip?job=build-zips"
+        - name: scrittura-italiana.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/scrittura-italiana.zip?job=build-zips"
+        - name: suno-prompt-creator.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/suno-prompt-creator.zip?job=build-zips"

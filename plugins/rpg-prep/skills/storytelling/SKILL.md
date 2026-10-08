@@ -7,6 +7,8 @@ description: Practical storytelling and narration technique for tabletop RPG gam
 
 Advice engine for narration craft at the table. Unlike `adventure-writing` (which produces a document), this skill produces **technique**: concrete, rehearsable advice tied to the user's actual scene, NPC, or problem. Answer in the user's language (Italian table → Italian examples they can read aloud).
 
+**Italian writing rules**: before writing any Italian text (rewritten scenes, NPC lines, examples to read at the table), read the `scrittura-italiana` skill and apply it (in short: no em dash (—), Italian punctuation).
+
 ## How to advise
 
 Ground every piece of advice in the user's material. If they ask "how do I make the lighthouse scene scary", rewrite THEIR lighthouse with the technique visible — don't lecture about horror in the abstract. Theory one line, application five.
@@ -51,7 +53,7 @@ Drop three unremarkable details per session (a name, an object, a habit). Later,
 
 ### Spotlight management
 
-Track who hasn't driven a scene this session; aim a question at their character's *want or fear* within the next hour ("Isabella, il ricordo della tua sire riaffiora — cosa fai?"). Quiet players usually need an invitation addressed to their character, not to them.
+Track who hasn't driven a scene this session; aim a question at their character's *want or fear* within the next hour ("Isabella, il ricordo della tua sire riaffiora. Cosa fai?"). Quiet players usually need an invitation addressed to their character, not to them.
 
 ## Rehearsal mode
 
