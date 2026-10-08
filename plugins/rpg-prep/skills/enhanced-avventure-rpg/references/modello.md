@@ -21,6 +21,8 @@ Il master li trova con una ricerca (Ctrl+F) in Joplin, in un editor o su carta. 
 
 **Tempi:** S1 30' · S2-S4 2 ore · S5 1 ora · margine 30'
 
+**Campagna:** [nome] · **Arco:** A2. [nome] · **Fronti:** F1 a F1.2 · **Fili:** T3, T5 <!-- solo per un episodio di campagna -->
+
 ## A colpo d'occhio
 
 | Dove | Quando | Antagonista | PNG chiave | In gioco stasera |

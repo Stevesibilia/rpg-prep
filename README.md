@@ -2,11 +2,12 @@
 
 Pre-session toolkit for tabletop RPG game masters, distributed as Claude Code skills.
 
-Eight skills:
+Nine skills:
 
 | Skill                    | What it does                                                                                                                                                                                                                                                                                             |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `enhanced-avventure-rpg` | Session prep as situations, never PC scripts, in an Italian document built to be looked up at the table: at-a-glance block, clock, self-contained scenes, clue tracker (three clues per revelation), stat blocks, and `visual:`/`mood:` in an appendix. Ships `scripts/controlla.py` to check the output |
+| `campagna-rpg`           | Campaign and arc story design, the layer above a session: premise, world truths, fronts with clocks, factions, PC hooks, arcs as functions, possible endings, thread tracker. Writes a Joplin note «Campagna: <nome>» that `enhanced-avventure-rpg` reads. Ships `scripts/controlla.py`                  |
 | `adventure-writing`      | Older guided adventure writing, kept for compatibility. Prefer `enhanced-avventure-rpg`                                                                                                                                                                                                                  |
 | `avventure-gdr`          | The previous claude.ai adventure skill: the golden rule (situations, never PC actions) with a compact template. Superseded by `enhanced-avventure-rpg`                                                                                                                                                   |
 | `cronaca-di-sessione`    | Turns a session recap into an in-world chronicle in the style of medieval travel accounts, with a chronicler fitted to the milieu                                                                                                                                                                        |
@@ -15,7 +16,7 @@ Eight skills:
 | `midjourney-prompts`     | Scene/NPC → ready-to-paste Midjourney prompts (v8.1/v7 aware), campaign style consistency                                                                                                                                                                                                                |
 | `suno-prompts`           | Scene mood → ready-to-paste Suno prompts (v5.5), session cue types, campaign sonic identity                                                                                                                                                                                                              |
 
-The generator skills chain: `enhanced-avventure-rpg` (or `adventure-writing`) emits `visual:` and `mood:` fields per scene; `midjourney-prompts` and `suno-prompts` consume them.
+The skills chain: `campagna-rpg` plans the campaign in a Joplin note; `enhanced-avventure-rpg` reads that note to prepare each session and emits `visual:` and `mood:` fields per scene; `midjourney-prompts` and `suno-prompts` consume them.
 
 ## Install
 
@@ -34,6 +35,6 @@ Quick version for Claude Code:
 .claude-plugin/marketplace.json    marketplace manifest
 plugins/rpg-prep/
   .claude-plugin/plugin.json       plugin manifest
-  skills/*/SKILL.md                the eight skills (+ references/, scripts/)
+  skills/*/SKILL.md                the nine skills (+ references/, scripts/)
 dist/                              packaged zips for claude.ai upload
 ```

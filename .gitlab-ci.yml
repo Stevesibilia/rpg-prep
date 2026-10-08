@@ -42,6 +42,8 @@ release:
     description: "Skill zips for claude.ai upload are attached as assets. Claude Code users install via the plugin marketplace instead (see INSTALL.md)."
     assets:
       links:
+        - name: campagna-rpg.zip
+          url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/campagna-rpg.zip?job=build-zips"
         - name: enhanced-avventure-rpg.zip
           url: "${CI_PROJECT_URL}/-/jobs/artifacts/${CI_COMMIT_TAG}/raw/dist/enhanced-avventure-rpg.zip?job=build-zips"
         - name: adventure-writing.zip

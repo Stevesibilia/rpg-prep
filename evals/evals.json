@@ -37,6 +37,22 @@
       "files": [
         "evals/files/ancora-originale.md"
       ]
+    },
+    {
+      "id": 6,
+      "skill": "campagna-rpg",
+      "prompt": "Voglio iniziare una campagna di Symbaroum di circa un anno, una sessione ogni due settimane, con quattro giocatori. Tema: la corruzione che si paga per proteggere chi si ama. Progettala.",
+      "expected_output": "Joplin note titled «Campagna: <nome>» following references/modello.md: header with Sessioni about 20-26 and Arco corrente; premise and open campaign question; 5-8 world truths starting with the pressure already under way; 2-4 fronts each with Obiettivo, Volto with a line, why hard to stop, a clock of 3-6 steps ending in «Se vince»; faction table; one block per PC with desire, fear, secret, bond, open question, fronts and arcs; 2-5 arcs written as functions with session ranges, question, fronts, revelations, PCs at the centre, tone shift and first cut; 2-4 endings as world states with conditions and seeds placed in earlier arcs; thread tracker; themes; 5 C's check; session zero; Aggiornamenti; visual/mood only in the appendix. No sentence predicts what a PC will do. No em or en dashes. Every bold field has a blank line before it. python3 plugins/rpg-prep/skills/campagna-rpg/scripts/controlla.py <output> exits 0.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "skill": "campagna-rpg",
+      "prompt": "Aggiorna la campagna: nelle ultime due sessioni i PG hanno trovato il registro delle maree della Confraternita e hanno fatto saltare un dragone del Consorzio. Nane ha deciso di vendere la casa.",
+      "expected_output": "Starting from references/esempio.md as the current note: F1 clock does not advance or moves back for the destroyed dredger; T6 marked ripagato; a new thread for Nane's sale; A1 closed and A2 in corso if its function is met; Arco corrente updated; the next arc reshaped rather than forcing the PCs back onto the plan; a summary of changes shown before overwriting; a dated entry in Aggiornamenti listing the sessions read. Past PC actions are recorded as facts; nothing predicts future PC choices. python3 plugins/rpg-prep/skills/campagna-rpg/scripts/controlla.py <output> exits 0.",
+      "files": [
+        "plugins/rpg-prep/skills/campagna-rpg/references/esempio.md"
+      ]
     }
   ]
 }

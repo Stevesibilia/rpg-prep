@@ -39,7 +39,7 @@ Nelle one-shot con **cast di supporto** (i giocatori interpretano PNG del passat
 
 ### 1. Raccogli il contesto prima di inventare
 
-Se hai gli strumenti di **GDR Archive**, leggi prima lì: brief della campagna, personaggi (desideri, paure, segreti, legami), ultime sessioni, voci del codex. Se hai **Joplin**, cerca le note della campagna. Chiedi al master solo ciò che manca: sistema e genere, chi c'è al tavolo, stato della campagna, vincoli pratici (one-shot o episodio, durata, scene che sogna). Se l'avventura tocca temi pesanti, chiedi una volta quali sono i limiti del tavolo.
+Se hai gli strumenti di **GDR Archive**, leggi prima lì: brief della campagna, personaggi (desideri, paure, segreti, legami), ultime sessioni, voci del codex. Se hai **Joplin**, cerca le note della campagna, e prima di tutto la nota **«Campagna: <nome>»** scritta da `campagna-rpg`: da lì prendi l'arco corrente (la sua funzione, la sua domanda, le sue rivelazioni), la posizione degli orologi dei fronti, i fili aperti da seminare o ripagare e gli agganci dei PG. L'episodio serve la funzione dell'arco senza diventare un copione: i fronti avanzano da sé, i fili si offrono, non si impongono. Chiedi al master solo ciò che manca: sistema e genere, chi c'è al tavolo, stato della campagna, vincoli pratici (one-shot o episodio, durata, scene che sogna). Se l'avventura tocca temi pesanti, chiedi una volta quali sono i limiti del tavolo.
 
 Se il master dà solo un'atmosfera, proponi tre premesse diverse nella struttura e lascia scegliere. Se porta un'avventura già scritta, ristrutturala nel modello senza cambiarne i contenuti, e segnala a parte le frasi che violano la regola d'oro.
 
