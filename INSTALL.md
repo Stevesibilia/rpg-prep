@@ -2,51 +2,52 @@
 
 Ten skills: `campagna-rpg`, `enhanced-avventure-rpg`, `revisione-avventura`, `avventure-gdr`, `adventure-writing`, `cronaca-di-sessione`, `scrittura-italiana`, `midjourney-prompts`, `suno-prompts`, `suno-prompt-creator`.
 
-**Short answer on visibility: no, a public repo is not required.** Claude Code installs from a local directory or from a private GitHub repo (it uses your own git credentials to clone). Claude.ai web and the Claude desktop/mobile apps don't use repos at all: you upload zip files manually. A public repo is only useful if you want to share the skills with other people.
+The repository is public at <https://gitlab.siberio.eu/oss/rpg-prep> and is a Claude plugin marketplace: `.claude-plugin/marketplace.json` lists one plugin, `rpg-prep`, which bundles all ten skills. A plugin installed on your Claude account is available in chat, in Cowork and in Claude Code.
 
----
+## 1. Claude.ai, desktop and mobile apps
 
-## 1. Claude Code (CLI / IDE)
+1. Open **Customize** in the sidebar, then **Plugins**.
+2. Select **Add marketplace** and enter `https://gitlab.siberio.eu/oss/rpg-prep`.
+3. Install the `rpg-prep` plugin.
+4. On the marketplace, turn on **Sync automatically**, or select **Check for updates** after each change.
 
-### Option A — Plugin marketplace from the local directory (recommended for you)
+The [plugin guide](https://claude.com/docs/cowork/guide/plugins.md) lists GitHub and public GitLab and Bitbucket repositories as supported sources. Whether that includes a self-hosted GitLab instance is not documented; if the marketplace cannot be added, use the zip fallback in section 3.
 
-The repo is already a valid plugin marketplace. From any Claude Code session:
+If you previously uploaded these skills as zips, remove those copies, or every skill will exist twice.
+
+## 2. Claude Code
 
 ```
-/plugin marketplace add /home/steve/Homelab/fun/rpg-prep
+/plugin marketplace add https://gitlab.siberio.eu/oss/rpg-prep.git
 /plugin install rpg-prep@rpg-prep
 ```
 
-All ten skills become available in every project. Update flow after editing a skill:
+Update after a change:
 
 ```
 /plugin marketplace update rpg-prep
 ```
 
-### Option B — Plugin marketplace from GitHub (private repo works)
-
-Push the repo to GitHub (private is fine, as long as `gh auth status` or your git credentials can clone it):
+From a local clone instead, for editing:
 
 ```
-/plugin marketplace add stefanosibilia/rpg-prep
-/plugin install rpg-prep@rpg-prep
+/plugin marketplace add /path/to/rpg-prep
 ```
 
-Same commands on any machine where you're authenticated. This is the way to sync skills across multiple computers.
+## 3. Fallback: zip upload on claude.ai
 
-### Option C — Plain personal skills (no plugin machinery)
+Every tag builds one zip per skill and attaches them to the [release](https://gitlab.siberio.eu/oss/rpg-prep/-/releases). On claude.ai: **Settings → Capabilities → Skills → Upload skill**, one zip per skill. Re-upload after each release.
 
-Copy the skill folders into your personal skills directory:
+To build the zips locally:
 
 ```bash
-cp -r plugins/rpg-prep/skills/* ~/.claude/skills/
+cd plugins/rpg-prep/skills
+for s in */; do zip -qr "../../../dist/${s%/}.zip" "${s%/}"; done
 ```
 
-Simplest, but updates are manual copies and there's no versioning/uninstall.
+## Using the skills
 
-### Using the skills
-
-Skills trigger automatically when the request matches their description. Typical session:
+Skills trigger when the request matches their description. A typical flow:
 
 ```
 > Progetta la campagna: Venezia 1923, le isole della laguna si svuotano
@@ -64,64 +65,14 @@ Skills trigger automatically when the request matches their description. Typical
 
 > E le musiche
   → suno-prompts reads the mood: fields, emits Suno prompts
-
 ```
 
-You can also invoke explicitly: "use the adventure-writing skill to...".
-
----
-
-## 2. Claude.ai (web)
-
-Marketplaces don't exist on claude.ai; skills are uploaded as zip files.
-
-Requirements: a paid plan (Pro/Max/Team/Enterprise) with code execution / skills capability enabled.
-
-1. Zips are pre-built in `dist/`:
-   - `dist/campagna-rpg.zip`
-   - `dist/enhanced-avventure-rpg.zip`
-   - `dist/revisione-avventura.zip`
-   - `dist/avventure-gdr.zip`
-   - `dist/adventure-writing.zip`
-   - `dist/cronaca-di-sessione.zip`
-   - `dist/scrittura-italiana.zip`
-   - `dist/suno-prompt-creator.zip`
-   - `dist/midjourney-prompts.zip`
-   - `dist/suno-prompts.zip`
-2. On claude.ai: **Settings → Capabilities → Skills → Upload skill** and upload each zip (one skill per zip; each zip contains the skill folder with its `SKILL.md` and `references/`).
-3. Toggle the uploaded skills on.
-4. In any chat, phrase requests as at the table ("preparami l'avventura...", "musiche per la sessione...") — Claude consults the matching skill automatically.
-
-After editing a skill locally, rebuild its zip and re-upload:
-
-```bash
-cd plugins/rpg-prep/skills
-zip -qr ../../../dist/adventure-writing.zip adventure-writing
-```
-
-Note: on claude.ai the skills can't read your local files. Paste campaign context (or attach the adventure doc) into the conversation; the generator skills work from what's in the chat.
-
----
-
-## 3. Claude desktop and mobile apps
-
-Skills uploaded to claude.ai are account-level: the desktop app and mobile app use the same backend, so the ten skills are available there automatically once uploaded via the web UI (step 2 above). There is no separate installation.
-
-The desktop app additionally bundles Claude Code — inside a Claude Code pane, the plugin marketplace from section 1 applies instead.
-
----
+You can also name a skill explicitly: «usa revisione-avventura su questa avventura».
 
 ## Keeping everything in sync
 
-Single source of truth: this repo. Suggested flow when you improve a skill:
+This repository is the single source of truth.
 
-1. Edit `plugins/rpg-prep/skills/<name>/SKILL.md`
-2. Claude Code picks it up via `/plugin marketplace update rpg-prep` (local) or `git push` + update (GitHub)
-3. Rebuild the zip and re-upload to claude.ai for web/app use
-
-The zip rebuild for all four:
-
-```bash
-cd plugins/rpg-prep/skills
-for s in */; do zip -qr "../../../dist/${s%/}.zip" "${s%/}"; done
-```
+1. Edit `plugins/rpg-prep/skills/<name>/`.
+2. Push to `main`. A marketplace with sync turned on picks the change up; in Claude Code, run `/plugin marketplace update rpg-prep`.
+3. Tag a release only if you still use the zip fallback.

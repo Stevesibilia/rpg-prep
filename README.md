@@ -21,14 +21,14 @@ The skills chain: `campagna-rpg` plans the campaign in a Joplin note; `enhanced-
 
 ## Install
 
-See [INSTALL.md](INSTALL.md) for detailed instructions covering Claude Code (plugin marketplace, local or GitHub, private repo OK), claude.ai web (zip upload from `dist/`), and the desktop/mobile apps (inherit claude.ai uploads). A public repo is not required.
-
-Quick version for Claude Code:
+The repository is a Claude plugin marketplace. On claude.ai, the desktop app or Cowork: **Customize → Plugins → Add marketplace**, enter `https://gitlab.siberio.eu/oss/rpg-prep`, install `rpg-prep`, turn on **Sync automatically**. In Claude Code:
 
 ```
-/plugin marketplace add /home/steve/Homelab/fun/rpg-prep
+/plugin marketplace add https://gitlab.siberio.eu/oss/rpg-prep.git
 /plugin install rpg-prep@rpg-prep
 ```
+
+[INSTALL.md](INSTALL.md) has the details and a zip fallback for claude.ai.
 
 ## Layout
 
@@ -37,5 +37,7 @@ Quick version for Claude Code:
 plugins/rpg-prep/
   .claude-plugin/plugin.json       plugin manifest
   skills/*/SKILL.md                the ten skills (+ references/, scripts/)
-dist/                              packaged zips for claude.ai upload
+docs/similar-skills.md             similar skills found online, and what was borrowed
+evals/                             eval prompts and expected outputs
+dist/                              zips built by CI on each tag (fallback for claude.ai)
 ```
