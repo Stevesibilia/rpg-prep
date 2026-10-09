@@ -2,13 +2,16 @@
 
 Eight skills: `campagna-rpg`, `enhanced-avventure-rpg`, `revisione-avventura`, `cronaca-di-sessione`, `scrittura-italiana`, `midjourney-prompts`, `suno-prompts`, `suno-prompt-creator`.
 
-The repository is public at <https://github.com/Stevesibilia/rpg-prep> and is a Claude plugin marketplace: `.claude-plugin/marketplace.json` lists one plugin, `rpg-prep`, which bundles all eight skills. A plugin installed on your Claude account is available in chat, in Cowork and in Claude Code.
+The repository is public at <https://github.com/Stevesibilia/rpg-prep> and is a Claude plugin marketplace named `stevesibilia`. `.claude-plugin/marketplace.json` lists two plugins:
+
+- `essentials`: general-purpose skills, today `scrittura-italiana`.
+- `rpg-prep`: the seven RPG skills. It depends on `essentials`, because every RPG skill applies `scrittura-italiana`. A plugin installed on your Claude account is available in chat, in Cowork and in Claude Code.
 
 ## 1. Claude.ai, desktop and mobile apps
 
 1. Open **Customize** in the sidebar, then **Plugins**.
 2. Select **Add marketplace** and enter `Stevesibilia/rpg-prep` (or `https://github.com/Stevesibilia/rpg-prep`).
-3. Install the `rpg-prep` plugin.
+3. Install the `essentials` and `rpg-prep` plugins.
 4. On the marketplace, turn on **Sync automatically**, or select **Check for updates** after each change.
 
 The [plugin guide](https://claude.com/docs/cowork/guide/plugins.md) supports marketplaces on github.com, gitlab.com and bitbucket.org; self-hosted instances are refused unless an organisation configures them.
@@ -19,13 +22,15 @@ If you previously uploaded these skills as zips, remove those copies, or every s
 
 ```
 /plugin marketplace add Stevesibilia/rpg-prep
-/plugin install rpg-prep@rpg-prep
+/plugin install rpg-prep@stevesibilia
 ```
+
+Claude Code installs `essentials` too, as a dependency of `rpg-prep`. Install `essentials@stevesibilia` alone to get the general-purpose skills without the RPG ones.
 
 Update after a change:
 
 ```
-/plugin marketplace update rpg-prep
+/plugin marketplace update stevesibilia
 ```
 
 From a local clone instead, for editing:
@@ -34,15 +39,30 @@ From a local clone instead, for editing:
 /plugin marketplace add /path/to/rpg-prep
 ```
 
+## Upgrading from the `rpg-prep` marketplace name
+
+Until version 0.6.0 the marketplace was named `rpg-prep`, so the plugin was `rpg-prep@rpg-prep`. The rename changes every plugin ID. Remove the old marketplace and add the repository again:
+
+```
+/plugin marketplace remove rpg-prep
+/plugin marketplace add Stevesibilia/rpg-prep
+/plugin install rpg-prep@stevesibilia
+```
+
+On claude.ai, remove the marketplace under **Customize → Plugins**, add it again, and install both plugins.
+
 ## 3. Fallback: zip upload on claude.ai
 
-Every tag builds one zip per skill and attaches them to the [release](https://github.com/Stevesibilia/rpg-prep/releases), built by `.github/workflows/release.yml`. On claude.ai: **Settings → Capabilities → Skills → Upload skill**, one zip per skill. Re-upload after each release.
+Every tag builds one zip per skill, across both plugins, and attaches them to the [release](https://github.com/Stevesibilia/rpg-prep/releases), built by `.github/workflows/release.yml`. On claude.ai: **Settings → Capabilities → Skills → Upload skill**, one zip per skill. Re-upload after each release.
 
 To build the zips locally:
 
 ```bash
-cd plugins/rpg-prep/skills
-for s in */; do zip -qr "../../../dist/${s%/}.zip" "${s%/}"; done
+mkdir -p dist
+for d in plugins/*/skills/*/; do
+  s="$(basename "$d")"
+  (cd "$(dirname "$d")" && zip -qr "$OLDPWD/dist/$s.zip" "$s")
+done
 ```
 
 ## Using the skills
@@ -73,6 +93,6 @@ You can also name a skill explicitly: «usa revisione-avventura su questa avvent
 
 This repository is the single source of truth.
 
-1. Edit `plugins/rpg-prep/skills/<name>/`.
-2. Push to `main`. A marketplace with sync turned on picks the change up; in Claude Code, run `/plugin marketplace update rpg-prep`.
+1. Edit `plugins/<plugin>/skills/<name>/`.
+2. Push to `main`. A marketplace with sync turned on picks the change up; in Claude Code, run `/plugin marketplace update stevesibilia`.
 3. Tag a release only if you still use the zip fallback.

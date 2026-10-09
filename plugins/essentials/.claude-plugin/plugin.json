@@ -1,0 +1,8 @@
+{
+  "name": "essentials",
+  "description": "General-purpose skills for any task or context. Today: Italian writing rules (scrittura-italiana).",
+  "version": "0.1.0",
+  "author": {
+    "name": "Stefano Sibilia"
+  }
+}

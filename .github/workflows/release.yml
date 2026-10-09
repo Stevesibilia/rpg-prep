@@ -19,10 +19,9 @@ jobs:
       - name: Build skill zips
         run: |
           mkdir -p dist
-          cd plugins/rpg-prep/skills
-          for s in */; do
-            s="${s%/}"
-            zip -qr "../../../dist/${s}.zip" "${s}"
+          for d in plugins/*/skills/*/; do
+            s="$(basename "$d")"
+            (cd "$(dirname "$d")" && zip -qr "$GITHUB_WORKSPACE/dist/${s}.zip" "${s}")
             echo "packaged ${s}.zip"
           done
 

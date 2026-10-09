@@ -1,15 +1,23 @@
 {
-  "name": "rpg-prep",
-  "description": "RPG session-prep skills: adventure writing, session chronicles, Midjourney and Suno prompt generation",
+  "name": "stevesibilia",
+  "description": "Stefano Sibilia's Claude plugins: general-purpose essentials and RPG session prep",
   "owner": {
     "name": "Stefano Sibilia",
     "email": "stefano.sibilia@gmail.com"
   },
   "plugins": [
     {
+      "name": "essentials",
+      "source": "./plugins/essentials",
+      "description": "General-purpose skills for any task or context, starting with Italian writing rules (scrittura-italiana).",
+      "author": {
+        "name": "Stefano Sibilia"
+      }
+    },
+    {
       "name": "rpg-prep",
       "source": "./plugins/rpg-prep",
-      "description": "Pre-session toolkit for tabletop RPG game masters: write table-ready adventures (Italian GM notes), turn sessions into in-world chronicles, generate Midjourney prompts for scene/NPC art and Suno prompts for session music.",
+      "description": "Pre-session toolkit for tabletop RPG game masters: write table-ready adventures (Italian GM notes), turn sessions into in-world chronicles, generate Midjourney prompts for scene/NPC art and Suno prompts for session music. Requires essentials.",
       "author": {
         "name": "Stefano Sibilia"
       }
