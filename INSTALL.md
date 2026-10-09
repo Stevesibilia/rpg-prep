@@ -1,8 +1,8 @@
-# Installing the rpg-prep skills
+# Installing the plugins
 
 Eight skills: `campagna-rpg`, `enhanced-avventure-rpg`, `revisione-avventura`, `cronaca-di-sessione`, `scrittura-italiana`, `midjourney-prompts`, `suno-prompts`, `suno-prompt-creator`.
 
-The repository is public at <https://github.com/Stevesibilia/rpg-prep> and is a Claude plugin marketplace named `stevesibilia`. `.claude-plugin/marketplace.json` lists two plugins:
+The repository is public at <https://github.com/Stevesibilia/stevesibilia-plugins> and is a Claude plugin marketplace named `stevesibilia`. `.claude-plugin/marketplace.json` lists two plugins:
 
 - `essentials`: general-purpose skills, today `scrittura-italiana`.
 - `rpg-prep`: the seven RPG skills. It depends on `essentials`, because every RPG skill applies `scrittura-italiana`. A plugin installed on your Claude account is available in chat, in Cowork and in Claude Code.
@@ -10,7 +10,7 @@ The repository is public at <https://github.com/Stevesibilia/rpg-prep> and is a 
 ## 1. Claude.ai, desktop and mobile apps
 
 1. Open **Customize** in the sidebar, then **Plugins**.
-2. Select **Add marketplace** and enter `Stevesibilia/rpg-prep` (or `https://github.com/Stevesibilia/rpg-prep`).
+2. Select **Add marketplace** and enter `Stevesibilia/stevesibilia-plugins` (or `https://github.com/Stevesibilia/stevesibilia-plugins`).
 3. Install the `essentials` and `rpg-prep` plugins.
 4. On the marketplace, turn on **Sync automatically**, or select **Check for updates** after each change.
 
@@ -21,7 +21,7 @@ If you previously uploaded these skills as zips, remove those copies, or every s
 ## 2. Claude Code
 
 ```
-/plugin marketplace add Stevesibilia/rpg-prep
+/plugin marketplace add Stevesibilia/stevesibilia-plugins
 /plugin install rpg-prep@stevesibilia
 ```
 
@@ -36,16 +36,16 @@ Update after a change:
 From a local clone instead, for editing:
 
 ```
-/plugin marketplace add /path/to/rpg-prep
+/plugin marketplace add /path/to/stevesibilia-plugins
 ```
 
 ## Upgrading from the `rpg-prep` marketplace name
 
-Until version 0.6.0 the marketplace was named `rpg-prep`, so the plugin was `rpg-prep@rpg-prep`. The rename changes every plugin ID. Remove the old marketplace and add the repository again:
+Until version 0.6.0 the repository was `Stevesibilia/rpg-prep` and the marketplace was named `rpg-prep`, so the plugin was `rpg-prep@rpg-prep`. GitHub redirects the old repository URL. The rename changes every plugin ID. Remove the old marketplace and add the repository again:
 
 ```
 /plugin marketplace remove rpg-prep
-/plugin marketplace add Stevesibilia/rpg-prep
+/plugin marketplace add Stevesibilia/stevesibilia-plugins
 /plugin install rpg-prep@stevesibilia
 ```
 
@@ -53,7 +53,7 @@ On claude.ai, remove the marketplace under **Customize → Plugins**, add it aga
 
 ## 3. Fallback: zip upload on claude.ai
 
-Every tag builds one zip per skill, across both plugins, and attaches them to the [release](https://github.com/Stevesibilia/rpg-prep/releases), built by `.github/workflows/release.yml`. On claude.ai: **Settings → Capabilities → Skills → Upload skill**, one zip per skill. Re-upload after each release.
+Every tag builds one zip per skill, across both plugins, and attaches them to the [release](https://github.com/Stevesibilia/stevesibilia-plugins/releases), built by `.github/workflows/release.yml`. On claude.ai: **Settings → Capabilities → Skills → Upload skill**, one zip per skill. Re-upload after each release.
 
 To build the zips locally:
 

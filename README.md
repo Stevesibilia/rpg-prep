@@ -1,10 +1,8 @@
-# rpg-prep
+# stevesibilia-plugins
 
-Pre-session toolkit for tabletop RPG game masters, distributed as Claude Code skills.
+Claude plugins by Stefano Sibilia. The repository is the `stevesibilia` plugin marketplace and ships two plugins:
 
-The repository is the `stevesibilia` plugin marketplace and ships two plugins:
-
-- `rpg-prep`: seven RPG skills.
+- `rpg-prep`: a pre-session toolkit for tabletop RPG game masters, seven skills.
 - `essentials`: general-purpose skills for any task. Today it holds `scrittura-italiana`, which every RPG skill applies, so `rpg-prep` declares `essentials` as a dependency.
 
 Eight skills:
@@ -24,10 +22,10 @@ The skills chain: `campagna-rpg` plans the campaign in a Joplin note; `enhanced-
 
 ## Install
 
-The repository is a Claude plugin marketplace. On claude.ai, the desktop app or Cowork: **Customize → Plugins → Add marketplace**, enter `Stevesibilia/rpg-prep`, install `essentials` and `rpg-prep`, turn on **Sync automatically**. In Claude Code:
+The repository is a Claude plugin marketplace. On claude.ai, the desktop app or Cowork: **Customize → Plugins → Add marketplace**, enter `Stevesibilia/stevesibilia-plugins`, install `essentials` and `rpg-prep`, turn on **Sync automatically**. In Claude Code:
 
 ```
-/plugin marketplace add Stevesibilia/rpg-prep
+/plugin marketplace add Stevesibilia/stevesibilia-plugins
 /plugin install rpg-prep@stevesibilia
 ```
 
