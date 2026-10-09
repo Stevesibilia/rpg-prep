@@ -2,15 +2,13 @@
 
 Pre-session toolkit for tabletop RPG game masters, distributed as Claude Code skills.
 
-Ten skills:
+Eight skills:
 
 | Skill                    | What it does                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `enhanced-avventure-rpg` | Session prep as situations, never PC scripts, in an Italian document built to be looked up at the table: at-a-glance block, clock, self-contained scenes, clue tracker (three clues per revelation), stat blocks, and `visual:`/`mood:` in an appendix. Ships `scripts/controlla.py` to check the output                                                           |
 | `revisione-avventura`    | Adversarial review of an adventure or a campaign: logic and causality, clue paths and scene reachability, the golden rule, pacing, and four simulated tables (methodical, impatient, lateral, uninterested). Verifies each finding, reports in the chat with severity and root cause, then brainstorms fixes one question at a time. Does not rewrite the document |
 | `campagna-rpg`           | Campaign and arc story design, the layer above a session: premise, world truths, fronts with clocks, factions, PC hooks, arcs as functions, possible endings, thread tracker. Writes a Joplin note «Campagna: <nome>» that `enhanced-avventure-rpg` reads. Ships `scripts/controlla.py`                                                                            |
-| `adventure-writing`      | Older guided adventure writing, kept for compatibility. Prefer `enhanced-avventure-rpg`                                                                                                                                                                                                                                                                            |
-| `avventure-gdr`          | The previous claude.ai adventure skill: the golden rule (situations, never PC actions) with a compact template. Superseded by `enhanced-avventure-rpg`                                                                                                                                                                                                             |
 | `cronaca-di-sessione`    | Turns a session recap into an in-world chronicle in the style of medieval travel accounts, with a chronicler fitted to the milieu                                                                                                                                                                                                                                  |
 | `scrittura-italiana`     | Italian writing rules applied by every other skill: no em or en dash, Italian punctuation and quotes                                                                                                                                                                                                                                                               |
 | `suno-prompt-creator`    | General-purpose Suno prompts: songs, themes, jingles, lyrics with structure tags                                                                                                                                                                                                                                                                                   |
@@ -36,7 +34,8 @@ The repository is a Claude plugin marketplace. On claude.ai, the desktop app or 
 .claude-plugin/marketplace.json    marketplace manifest
 plugins/rpg-prep/
   .claude-plugin/plugin.json       plugin manifest
-  skills/*/SKILL.md                the ten skills (+ references/, scripts/)
+  skills/*/SKILL.md                the eight skills (+ references/, scripts/)
+archive/skills/                    superseded skills, kept for reference
 docs/similar-skills.md             similar skills found online, and what was borrowed
 evals/                             eval prompts and expected outputs
 dist/                              zips built by CI on each tag (fallback for claude.ai)

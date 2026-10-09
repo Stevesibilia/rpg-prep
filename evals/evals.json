@@ -2,13 +2,6 @@
   "skill_name": "rpg-prep",
   "evals": [
     {
-      "id": 1,
-      "skill": "adventure-writing",
-      "prompt": "Devo preparare la sessione di sabato per la mia campagna di Symbaroum. I PG (una strega, un cacciatore di taglie e uno studioso di Ordo Magica) hanno appena scoperto che un villaggio ai margini del Davokar è stato abbandonato in una notte. Scrivi l'avventura completa per una sessione di 4 ore.",
-      "expected_output": "Complete Italian adventure document: dramatic question, strong start, ~10 secrets/clues, 4-6 scenes with visual:/mood: fields in English, NPCs with want/fear/mannerism, flexible climax, hook-ignored fallback",
-      "files": []
-    },
-    {
       "id": 2,
       "skill": "midjourney-prompts",
       "prompt": "I need images for my Call of Cthulhu one-shot set in a 1920s Ligurian fishing village. Scenes: 1) the village seen from an arriving boat at dusk, fog rolling in; 2) the abandoned lighthouse interior, keeper's dinner still on the table covered in mold; 3) portrait of Don Ruggero, the village priest hiding a terrible secret, gaunt, always clutching his rosary. Give me Midjourney prompts.",

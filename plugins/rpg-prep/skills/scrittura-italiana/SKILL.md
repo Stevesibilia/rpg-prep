@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-description: "Regole di scrittura e punteggiatura per QUALSIASI testo in italiano: niente trattino lungo (—), punteggiatura italiana corretta. Usala SEMPRE quando scrivi, traduci, riassumi o revisioni testo in italiano, di qualunque genere e lunghezza: cronache e riassunti di sessione, avventure, descrizioni di PNG e luoghi, testi da leggere al tavolo, note Joplin, email, messaggi, testi di canzoni, risposte in chat. Anche quando un'altra skill di scrittura è attiva (cronaca-di-sessione, adventure-writing, storytelling, suno-prompt-creator…), queste regole si applicano insieme alle sue."
+description: "Regole di scrittura e punteggiatura per QUALSIASI testo in italiano: niente trattino lungo (—), punteggiatura italiana corretta. Usala SEMPRE quando scrivi, traduci, riassumi o revisioni testo in italiano, di qualunque genere e lunghezza: cronache e riassunti di sessione, avventure, descrizioni di PNG e luoghi, testi da leggere al tavolo, note Joplin, email, messaggi, testi di canzoni, risposte in chat. Anche quando un'altra skill di scrittura è attiva (cronaca-di-sessione, enhanced-avventure-rpg, campagna-rpg, revisione-avventura, suno-prompt-creator…), queste regole si applicano insieme alle sue."
 ---
 
 # Scrittura italiana

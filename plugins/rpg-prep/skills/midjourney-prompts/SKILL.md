@@ -37,7 +37,7 @@ Rules that materially change output quality:
 
 **Direct description** — the user describes a scene, NPC, or location in chat. This is the base case; build the prompt from their words, asking at most one clarifying question (and only if the answer changes composition, e.g. "portrait or full scene?").
 
-**Structured adventure doc** — a file from the `adventure-writing` skill. Harvest each scene's `visual:` field and the NPCs' `Segno distintivo` lines; those are pre-digested raw material.
+**Structured adventure doc** — a file from the `enhanced-avventure-rpg` skill, whose «Appendice: immagini e musica» lists a `visual:` line under each scene heading (`### S3. Nome`). Harvest each scene's `visual:` field and the NPCs' `Segno distintivo` lines; those are pre-digested raw material.
 
 **Existing/external adventure** — any other adventure text: published module excerpts, old campaign notes, a PDF paste. No `visual:` fields exist, so extract them yourself: for each scene or location, identify subject, era/setting, light source, weather, palette from the prose, then build the prompt as usual. Where the text is silent (lighting, time of day), choose what serves the scene's function and say so — the GM can override in one word.
 

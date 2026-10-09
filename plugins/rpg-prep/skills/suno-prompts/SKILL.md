@@ -78,7 +78,7 @@ Keep one recognizable element (an instrument or texture) in every cue of the cam
 
 **Direct request** — the user names a scene or moment ("musica per il funerale del PNG"). Base case: pick the cue type from the table above, apply the campaign palette, build the prompt.
 
-**Structured adventure doc** — a file from the `adventure-writing` skill. Harvest each scene's `mood:` field as pre-digested raw material.
+**Structured adventure doc** — a file from the `enhanced-avventure-rpg` skill, whose «Appendice: immagini e musica» lists a `mood:` line under each scene heading (`### S3. Nome`). Harvest each scene's `mood:` field as pre-digested raw material.
 
 **Existing/external adventure** — published module, old notes, any adventure text without `mood:` fields. Derive the mood yourself: for each scene, read its function (investigation? ambush? revelation? aftermath?) and emotional register from the prose, map it to a cue type, and state the mood you inferred in one line so the GM can correct it cheaply.
 

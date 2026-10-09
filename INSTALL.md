@@ -1,8 +1,8 @@
 # Installing the rpg-prep skills
 
-Ten skills: `campagna-rpg`, `enhanced-avventure-rpg`, `revisione-avventura`, `avventure-gdr`, `adventure-writing`, `cronaca-di-sessione`, `scrittura-italiana`, `midjourney-prompts`, `suno-prompts`, `suno-prompt-creator`.
+Eight skills: `campagna-rpg`, `enhanced-avventure-rpg`, `revisione-avventura`, `cronaca-di-sessione`, `scrittura-italiana`, `midjourney-prompts`, `suno-prompts`, `suno-prompt-creator`.
 
-The repository is public at <https://github.com/Stevesibilia/rpg-prep> and is a Claude plugin marketplace: `.claude-plugin/marketplace.json` lists one plugin, `rpg-prep`, which bundles all ten skills. A plugin installed on your Claude account is available in chat, in Cowork and in Claude Code.
+The repository is public at <https://github.com/Stevesibilia/rpg-prep> and is a Claude plugin marketplace: `.claude-plugin/marketplace.json` lists one plugin, `rpg-prep`, which bundles all eight skills. A plugin installed on your Claude account is available in chat, in Cowork and in Claude Code.
 
 ## 1. Claude.ai, desktop and mobile apps
 
