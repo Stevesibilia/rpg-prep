@@ -2,23 +2,23 @@
 
 Ten skills: `campagna-rpg`, `enhanced-avventure-rpg`, `revisione-avventura`, `avventure-gdr`, `adventure-writing`, `cronaca-di-sessione`, `scrittura-italiana`, `midjourney-prompts`, `suno-prompts`, `suno-prompt-creator`.
 
-The repository is public at <https://gitlab.siberio.eu/oss/rpg-prep> and is a Claude plugin marketplace: `.claude-plugin/marketplace.json` lists one plugin, `rpg-prep`, which bundles all ten skills. A plugin installed on your Claude account is available in chat, in Cowork and in Claude Code.
+The repository is public at <https://github.com/Stevesibilia/rpg-prep> and is a Claude plugin marketplace: `.claude-plugin/marketplace.json` lists one plugin, `rpg-prep`, which bundles all ten skills. A plugin installed on your Claude account is available in chat, in Cowork and in Claude Code.
 
 ## 1. Claude.ai, desktop and mobile apps
 
 1. Open **Customize** in the sidebar, then **Plugins**.
-2. Select **Add marketplace** and enter `https://gitlab.siberio.eu/oss/rpg-prep`.
+2. Select **Add marketplace** and enter `Stevesibilia/rpg-prep` (or `https://github.com/Stevesibilia/rpg-prep`).
 3. Install the `rpg-prep` plugin.
 4. On the marketplace, turn on **Sync automatically**, or select **Check for updates** after each change.
 
-The [plugin guide](https://claude.com/docs/cowork/guide/plugins.md) lists GitHub and public GitLab and Bitbucket repositories as supported sources. Whether that includes a self-hosted GitLab instance is not documented; if the marketplace cannot be added, use the zip fallback in section 3.
+The [plugin guide](https://claude.com/docs/cowork/guide/plugins.md) supports marketplaces on github.com, gitlab.com and bitbucket.org; self-hosted instances are refused unless an organisation configures them.
 
 If you previously uploaded these skills as zips, remove those copies, or every skill will exist twice.
 
 ## 2. Claude Code
 
 ```
-/plugin marketplace add https://gitlab.siberio.eu/oss/rpg-prep.git
+/plugin marketplace add Stevesibilia/rpg-prep
 /plugin install rpg-prep@rpg-prep
 ```
 
@@ -36,7 +36,7 @@ From a local clone instead, for editing:
 
 ## 3. Fallback: zip upload on claude.ai
 
-Every tag builds one zip per skill and attaches them to the [release](https://gitlab.siberio.eu/oss/rpg-prep/-/releases). On claude.ai: **Settings → Capabilities → Skills → Upload skill**, one zip per skill. Re-upload after each release.
+Every tag builds one zip per skill and attaches them to the [release](https://github.com/Stevesibilia/rpg-prep/releases), built by `.github/workflows/release.yml`. On claude.ai: **Settings → Capabilities → Skills → Upload skill**, one zip per skill. Re-upload after each release.
 
 To build the zips locally:
 

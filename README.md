@@ -21,10 +21,10 @@ The skills chain: `campagna-rpg` plans the campaign in a Joplin note; `enhanced-
 
 ## Install
 
-The repository is a Claude plugin marketplace. On claude.ai, the desktop app or Cowork: **Customize → Plugins → Add marketplace**, enter `https://gitlab.siberio.eu/oss/rpg-prep`, install `rpg-prep`, turn on **Sync automatically**. In Claude Code:
+The repository is a Claude plugin marketplace. On claude.ai, the desktop app or Cowork: **Customize → Plugins → Add marketplace**, enter `Stevesibilia/rpg-prep`, install `rpg-prep`, turn on **Sync automatically**. In Claude Code:
 
 ```
-/plugin marketplace add https://gitlab.siberio.eu/oss/rpg-prep.git
+/plugin marketplace add Stevesibilia/rpg-prep
 /plugin install rpg-prep@rpg-prep
 ```
 

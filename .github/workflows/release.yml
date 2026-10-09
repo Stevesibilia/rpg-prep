@@ -1,0 +1,35 @@
+# Build one zip per skill (uploadable to claude.ai) and attach them to a
+# GitHub release when a tag is pushed. Claude users normally install the
+# plugin marketplace instead; the zips are the fallback.
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build skill zips
+        run: |
+          mkdir -p dist
+          cd plugins/rpg-prep/skills
+          for s in */; do
+            s="${s%/}"
+            zip -qr "../../../dist/${s}.zip" "${s}"
+            echo "packaged ${s}.zip"
+          done
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/*.zip \
+            --title "rpg-prep $GITHUB_REF_NAME" \
+            --notes "Skill zips for claude.ai upload are attached. Claude users normally add the repository as a plugin marketplace instead (see INSTALL.md)."
